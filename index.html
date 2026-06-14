@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBA CHART vala | Professional Trading Academy & Market Analysis</title>
+    <meta name="description" content="Master the art of stock market trading with MBA CHART vala. Institutional-grade technical analysis, candlestick patterns, and elite mentorship by Pratik Sagale.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Background Grid & Glow Effects -->
+    <div class="glow-bg-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo-area">
+                <img src="assets/images/logo.jpg" alt="MBA CHART vala Logo" class="nav-logo">
+                <span class="logo-text">MBA <span class="gold-text">CHART</span> vala</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#simulator" class="nav-link">Interactive Chart</a></li>
+                    <li><a href="#testimonials" class="nav-link">Success Stories</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-ctas">
+                <a href="#contact" class="btn btn-gold btn-nav">Enquire Now</a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="particleCanvas" class="hero-particles"></canvas>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    <span class="badge-text">Decode the Language of Price Action</span>
+                </div>
+                <h1 class="hero-title">
+                    Master Trading with the <br>
+                    <span class="gold-gradient-text">MBA CHART vala</span> Method
+                </h1>
+                <p class="hero-description">
+                    Stop guessing. Start executing. We combine strategic business management principles with institutional-grade technical analysis to build disciplined, profitable market traders.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-gold btn-lg"><i class="fa-solid fa-graduation-cap"></i> Explore Courses</a>
+                    <a href="#simulator" class="btn btn-outline btn-lg"><i class="fa-solid fa-gamepad"></i> Try Simulator</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-card-container">
+                    <div class="floating-chart-card">
+                        <div class="card-header">
+                            <span class="pair-name"><i class="fa-solid fa-cubes"></i> Live Market Tracker</span>
+                            <span class="live-pulse"></span>
+                        </div>
+                        <div class="mock-chart-body">
+                            <!-- Visual of simulated trading -->
+                            <div class="bar-chart-visual">
+                                <div class="chart-candle green" style="height: 60px;"></div>
+                                <div class="chart-candle red" style="height: 45px;"></div>
+                                <div class="chart-candle green" style="height: 75px;"></div>
+                                <div class="chart-candle green" style="height: 90px;"></div>
+                                <div class="chart-candle red" style="height: 65px;"></div>
+                                <div class="chart-candle green" style="height: 110px;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer-stats">
+                            <div class="stat-item">
+                                <span class="lbl">RSI (14)</span>
+                                <span class="val bull-text">64.5 (Bullish)</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="lbl">Moving Avg</span>
+                                <span class="val bull-text">Buy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Ticker Marquee -->
+    <div class="ticker-wrapper">
+        <div class="ticker-content" id="marketTicker">
+            <!-- Tickers will be dynamically injected and scrolled by JS -->
+        </div>
+    </div>
+
+    <!-- Core Statistics -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="5000">0</h3>
+                <p class="stat-label">Students Trained</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="5">0</h3>
+                <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="90">0</h3>
+                <p class="stat-label">Analysis Accuracy %</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="1500">0</h3>
+                <p class="stat-label">VIP Members</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Founder Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-image-column">
+                <div class="about-card">
+                    <div class="image-wrapper">
+                        <img src="assets/images/founder.jpg" alt="Pratik Sagale" class="founder-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="about-card-info">
+                        <h3>Pratik Sagale</h3>
+                        <p class="founder-title">Founder & Chief Analyst</p>
+                        <div class="founder-socials">
+                            <a href="tel:9130650171" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                            <a href="mailto:pratiksagale4141@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/919130650171" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text-column">
+                <span class="section-tag">MEET THE FOUNDER</span>
+                <h2 class="section-title">Bridging Strategy and <br><span class="gold-text">Market Psychology</span></h2>
+                <p class="about-p highlight">
+                    "Trading isn't about predicting the future; it's about building a robust framework of probability, risk management, and emotional discipline." — Pratik Sagale
+                </p>
+                <p class="about-p">
+                    At **MBA CHART vala**, we believe that stock market charts tell stories. These stories are shaped by the collective psychology of millions of buyers and sellers. Our mission is to give you the exact tools, patterns, and psychological stamina to read these charts with clarity and execute trades with absolute precision.
+                </p>
+                <p class="about-p">
+                    Whether you are an absolute beginner struggling to read support and resistance, or an intermediate trader looking to refine your price action edge, we design our mentorship to fast-track your journey toward financial independence.
+                </p>
+                <div class="about-keypoints">
+                    <div class="keypoint">
+                        <span class="kp-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                        <div class="kp-text">
+                            <h4>Risk Management First</h4>
+                            <p>We teach defensive trading. Capital preservation is our highest priority.</p>
+                        </div>
+                    </div>
+                    <div class="keypoint">
+                        <span class="kp-icon"><i class="fa-solid fa-brain"></i></span>
+                        <div class="kp-text">
+                            <h4>Trading Psychology</h4>
+                            <p>Overcome greed and fear through rule-based execution and journaling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Programs Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">OUR METHODOLOGY</span>
+                <h2 class="section-title text-center">Elite Programs & Services</h2>
+                <p class="section-subtitle">Accelerate your growth path with structured training programs designed by trading experts.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Program 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Chart Masterclass</h3>
+                    <p class="service-desc">A structured learning program covering Basics to Advanced Price Action, Candlestick Formations, Chart Patterns, and Risk-Reward Optimization.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check gold-text"></i> Live Interactive Lectures</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Custom Trading Strategies</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Certificate of Completion</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-sm btn-outline-gold">Learn More</a>
+                </div>
+                <!-- Program 2 -->
+                <div class="service-card featured">
+                    <div class="featured-badge">MOST POPULAR</div>
+                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>1-on-1 Mentorship</h3>
+                    <p class="service-desc">Direct personalized coaching with Pratik Sagale. We analyze your trading logs, pinpoint psychological biases, and co-develop a custom strategy.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check gold-text"></i> Personalized Session Audio/Video</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Real-time Portfolio Review</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Priority Whatsapp Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-sm btn-gold">Enroll Now</a>
+                </div>
+                <!-- Program 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Daily Market Analysis</h3>
+                    <p class="service-desc">Receive pre-market briefings, Nifty & Bank Nifty key levels, swing trading setups, and real-time chart structures directly in your inbox.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check gold-text"></i> Pre-market Support & Resistance</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> High-probability Swing Setups</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Weekly Market Breakdown Videos</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-sm btn-outline-gold">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator / Chart Section -->
+    <section id="simulator" class="simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PRACTICE ZONE</span>
+                <h2 class="section-title text-center">Interactive Trading Simulator</h2>
+                <p class="section-subtitle">Put your pattern recognition to the test! Try our real-time price action simulator. Click BUY or SELL to make virtual profit and losses.</p>
+            </div>
+            
+            <div class="simulator-layout">
+                <div class="simulator-card">
+                    <div class="sim-header">
+                        <div class="sim-market-info">
+                            <span class="sim-ticker-name">NIFTY 50 INDEX</span>
+                            <span class="sim-live-price" id="simLivePrice">₹ 23,450.50</span>
+                            <span class="sim-live-change bull-text" id="simLiveChange">+0.45%</span>
+                        </div>
+                        <div class="sim-pattern-status">
+                            <span class="lbl">Active Pattern:</span>
+                            <span class="val" id="activePatternName">Random Market Noise</span>
+                        </div>
+                    </div>
+                    
+                    <div class="canvas-container">
+                        <canvas id="simChartCanvas"></canvas>
+                        <!-- P&L Overlay during active positions -->
+                        <div class="pnl-notification" id="pnlOverlay">
+                            <span id="pnlLabel">P&L: </span>
+                            <span id="pnlValue">₹0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="simulator-controls">
+                        <button class="btn-sim btn-buy" id="btnBuy"><i class="fa-solid fa-arrow-trend-up"></i> BUY (Long)</button>
+                        <button class="btn-sim btn-sell" id="btnSell"><i class="fa-solid fa-arrow-trend-down"></i> SELL (Short)</button>
+                        <button class="btn-sim btn-close" id="btnClosePos" disabled><i class="fa-solid fa-xmark"></i> CLOSE POSITION</button>
+                    </div>
+                </div>
+
+                <div class="simulator-dashboard">
+                    <div class="dash-block portfolio-block">
+                        <h3>Your Virtual Account</h3>
+                        <div class="dash-grid">
+                            <div class="dash-stat">
+                                <span class="lbl">Wallet Balance</span>
+                                <span class="val" id="simBalance">₹ 1,00,000</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="lbl">Active Trades</span>
+                                <span class="val" id="simActiveTrades">0</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="lbl">Total Net Profit</span>
+                                <span class="val" id="simTotalNetPnl">₹ 0</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="lbl">Win Rate</span>
+                                <span class="val" id="simWinRate">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-block pattern-selector-block">
+                        <h3>Pattern Sandbox</h3>
+                        <p class="pattern-intro-text">Force the market generator to construct specific chart structures to understand how breakout patterns formulate:</p>
+                        <div class="pattern-buttons-grid">
+                            <button class="btn-pattern active" data-pattern="random">Random Walk</button>
+                            <button class="btn-pattern" data-pattern="double-bottom">Double Bottom (Bullish)</button>
+                            <button class="btn-pattern" data-pattern="head-shoulders">Head & Shoulders (Bearish)</button>
+                            <button class="btn-pattern" data-pattern="ascending-triangle">Ascending Triangle (Breakout)</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-block guide-block">
+                        <h3>Trading Guide</h3>
+                        <p><i class="fa-solid fa-circle-info gold-text"></i> Wait for a pattern to complete, then open a position. Close the position once you hit a profit target or if the trend reverses!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Success Stories Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">COMMUNITY SUCCESS</span>
+                <h2 class="section-title text-center">Reviews from Real Traders</h2>
+                <p class="section-subtitle">Read how students transitioned from emotional trading to consistent execution.</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"Before taking Pratik's mentorship, I was constantly blowing up my trading accounts. His stress on risk management and detailed candlestick breakdown completely changed my perspective."</p>
+                    <div class="user-info">
+                        <div class="user-details">
+                            <span class="name">Rohan Deshmukh</span>
+                            <span class="role">Full-Time Swing Trader</span>
+                        </div>
+                        <span class="pnl-badge bull">+124% Return</span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"The pre-market levels provided by MBA CHART vala are extremely accurate. I plan my intraday trades strictly around those levels and my success rate has improved significantly."</p>
+                    <div class="user-info">
+                        <div class="user-details">
+                            <span class="name">Anjali Sharma</span>
+                            <span class="role">IT Professional & Part-Time Trader</span>
+                        </div>
+                        <span class="pnl-badge bull">+68% Return</span>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"The 1-on-1 mentorship sessions helped me identify key trading flaws. Pratik doesn't feed you calls; he teaches you how to catch the wave independently. Truly invaluable."</p>
+                    <div class="user-info">
+                        <div class="user-details">
+                            <span class="name">Vikram Patil</span>
+                            <span class="role">Retail Trader</span>
+                        </div>
+                        <span class="pnl-badge bull">+42% Return</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info-column">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Your <br><span class="gold-text">Trading Blueprint</span></h2>
+                <p class="contact-desc">Have questions about our mentorship or looking for custom analysis solutions? Contact us directly or fill out the form for a callback.</p>
+                
+                <div class="contact-cards">
+                    <a href="tel:9130650171" class="contact-card">
+                        <div class="cc-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="cc-text">
+                            <span>Phone Number</span>
+                            <strong>+91 9130650171</strong>
+                        </div>
+                    </a>
+                    <a href="mailto:pratiksagale4141@gmail.com" class="contact-card">
+                        <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="cc-text">
+                            <span>Email Address</span>
+                            <strong>pratiksagale4141@gmail.com</strong>
+                        </div>
+                    </a>
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="cc-text">
+                            <span>Location</span>
+                            <strong>Pune, Maharashtra, India</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-channels">
+                    <h3>Join Our Communities</h3>
+                    <div class="social-buttons">
+                        <a href="https://wa.me/919130650171" target="_blank" class="social-btn wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#" class="social-btn tg"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-column">
+                <div class="form-wrapper">
+                    <h3>Request a Callback</h3>
+                    <p>Provide your details below and Pratik's team will contact you within 24 hours.</p>
+                    <form id="consultationForm">
+                        <div class="form-group">
+                            <label for="userName">Full Name</label>
+                            <input type="text" id="userName" name="userName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="userEmail">Email Address</label>
+                                <input type="email" id="userEmail" name="userEmail" required placeholder="name@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="userPhone">Phone Number</label>
+                                <input type="tel" id="userPhone" name="userPhone" required placeholder="10-digit mobile number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tradingExperience">Trading Experience</label>
+                            <select id="tradingExperience" name="tradingExperience">
+                                <option value="beginner">Beginner (0-6 months)</option>
+                                <option value="intermediate">Intermediate (6 months - 2 years)</option>
+                                <option value="advanced">Advanced (2+ years)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="userMessage">Message / Main Challenge</label>
+                            <textarea id="userMessage" name="userMessage" rows="4" placeholder="How can we help you? Describe your trading bottlenecks."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-full">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                    <div class="success-message" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Thank You!</h4>
+                        <p>Your callback request has been received. We will reach out to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand-column">
+                <a href="#" class="logo-area">
+                    <img src="assets/images/logo.jpg" alt="MBA CHART vala Logo" class="nav-logo">
+                    <span class="logo-text">MBA <span class="gold-text">CHART</span> vala</span>
+                </a>
+                <p>Empowering retail investors with professional trading courses, pre-market breakdowns, and specialized chart structures.</p>
+            </div>
+            <div class="footer-links-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Founder</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#simulator">Interactive Chart</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal-column">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-phone gold-text"></i> +91 9130650171</p>
+                <p><i class="fa-solid fa-envelope gold-text"></i> pratiksagale4141@gmail.com</p>
+                <p><i class="fa-solid fa-clock gold-text"></i> Mon - Sat: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">&copy; 2026 MBA CHART vala. All Rights Reserved. Designed by Antigravity.</p>
+                <p class="disclaimer"><strong>Disclaimer:</strong> All information and analyses shared are strictly for educational and training purposes. Trading in equities, derivatives, and commodities carries substantial risk. Please consult a registered financial advisor before making actual investments.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top and WhatsApp Sticky buttons -->
+    <button class="back-to-top" id="backToTopBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <a href="https://wa.me/919130650171" class="whatsapp-sticky" target="_blank" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chart-demo.js"></script>
+</body>
+</html>
